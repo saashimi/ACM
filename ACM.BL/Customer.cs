@@ -15,7 +15,7 @@ namespace ACM.BL
 
         public Customer(int customerId)
         {
-            this.CustomerID = customerId;
+            this.CustomerId = customerId;
             // this represents the current instance of this class.
         }
 
@@ -37,7 +37,7 @@ namespace ACM.BL
 
         public string EmailAddress { get; set; }
 
-        public int CustomerID { get; private set; }
+        public int CustomerId { get; private set; }
 
         public string FullName
         {
@@ -59,9 +59,8 @@ namespace ACM.BL
         /// <summary>
         /// Retrieve one customer.
         /// </summary>
-        /// <param name="customerID"></param>
-        /// <returns></returns>
-        public Customer Retrieve(int customerID)
+
+        public Customer Retrieve(int customerId)
         {
             return new Customer();
         }
