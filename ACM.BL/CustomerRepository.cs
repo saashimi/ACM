@@ -8,12 +8,20 @@ namespace ACM.BL
 {
     public class CustomerRepository
     {
+        private AddressRepository addressRepository { get; set; }
+
+        public CustomerRepository()
+        {
+            addressRepository = new AddressRepository();
+        }
         /// <summary>
         /// Retrieve one customer.
         /// </summary>
         public Customer Retrieve(int customerId)
         {
             Customer customer = new Customer(customerId);
+            customer.AddressList = addressRepository.
+                RetrieveByCustomerId(customerId).ToList();
 
             if (customerId == 1)
             {
@@ -32,8 +40,9 @@ namespace ACM.BL
         /// <summary>
         /// Saves the current customer.
         /// </summary>
-        public bool Save()
+        public bool Save(Customer customer)
         {
+            // Code that saves the defined customer
             return true;
         }
     }
