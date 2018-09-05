@@ -6,8 +6,36 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    class ProductRepository
+    public class ProductRepository
     {
+        /// <summary>
+        /// Retrieve one product
+        /// </summary>
+        public Product Retrieve(int productId)
+        {
+            Product product = new Product(productId);
+        
+            if (productId == 2)
+            {
+                product.ProductName = "Sunflowers";
+                product.ProductDescription = "Assorted Sizes";
+                product.CurrentPrice = 15.96M;
+            }
+            return product;
+        }
+
+        public List<Product> Retrieve()
+        {
+            return new List<Product>();
+        }
+
+        /// <summary>
+        /// Saves the current customer.
+        /// </summary>
+        public bool Save()
+        {
+            return true;
+        }
 
     }
 }
