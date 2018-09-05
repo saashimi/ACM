@@ -17,7 +17,7 @@ namespace ACM.BL
 
             if (orderId == 10)
             {
-                order.OrderDate = new DateTimeOffset(2014)
+                order.OrderDate = new DateTimeOffset(2014, 5, 1, 8, 30, 52, new TimeSpan(1, 0, 0));
             }
             return order;
         }
