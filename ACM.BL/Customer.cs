@@ -23,6 +23,8 @@ namespace ACM.BL
 
         public List<Address> AddressList { get; set; }
 
+        public int CustomerType { get; set; }
+
         public static int InstanceCount { get; set; }
 
         private string _lastName;
@@ -92,6 +94,11 @@ namespace ACM.BL
             if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
 
             return isValid;
+        }
+
+        public override string ToString()
+        {
+            return FullName;
         }
     }
 }

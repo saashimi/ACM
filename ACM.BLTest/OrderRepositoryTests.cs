@@ -55,9 +55,15 @@ namespace ACM.BLTest
 
             for (int i = 0; i < 1; i++)
             {
-                Assert.AreEqual(expected.OrderDisplayItemList[i].OrderQuantity, actual.OrderDisplayItemList[i].OrderQuantity);
-                Assert.AreEqual(expected.OrderDisplayItemList[i].ProductName, actual.OrderDisplayItemList[i].ProductName);
-                Assert.AreEqual(expected.OrderDisplayItemList[i].PurchasePrice, actual.OrderDisplayItemList[i].PurchasePrice);
+                Assert.AreEqual(
+                    expected.OrderDisplayItemList[i].OrderQuantity, 
+                    actual.OrderDisplayItemList[i].OrderQuantity);
+                Assert.AreEqual(
+                    expected.OrderDisplayItemList[i].ProductName, 
+                    actual.OrderDisplayItemList[i].ProductName);
+                Assert.AreEqual(
+                    expected.OrderDisplayItemList[i].PurchasePrice, 
+                    actual.OrderDisplayItemList[i].PurchasePrice);
             }
 
         }
